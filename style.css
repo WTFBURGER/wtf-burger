@@ -1,1 +1,105 @@
-body { font-family: sans-serif; background-color: #000; color: #fff; }
+/* Style commun pour les 3 pages */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: white;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #111;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 60px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h1, .hero-content h2, .hero-content h3 {
+  margin: 10px 0;
+}
+
+.hero-content p {
+  font-size: 16px;
+}
+
+.cta-button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.content {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.socials a {
+  margin: 0 10px;
+}
+
+.socials img {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  header {
+    flex-direction: column;
+  }
+} 
