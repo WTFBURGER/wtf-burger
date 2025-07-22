@@ -1,132 +1,47 @@
+<!-- PAGE PRINCIPALE -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WTF BURGER</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #000;
-      color: white;
-      text-align: center;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('hero-header.jpg') no-repeat center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .hero-text {
-      padding: 40px 20px 0;
-      z-index: 2;
-      position: relative;
-    }
-
-    .hero-text h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .hero-text h2 {
-      font-size: 26px;
-      color: #FFD700;
-      margin: 0;
-    }
-
-    .hero-text h3 {
-      font-size: 24px;
-      color: #FFD700;
-      margin: 10px 0 20px;
-    }
-
-    .hero-text p {
-      font-size: 16px;
-      margin: 0;
-    }
-
-    .cta-button {
-      background-color: red;
-      color: white;
-      font-weight: bold;
-      padding: 16px 28px;
-      border-radius: 30px;
-      font-size: 18px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 0 auto;
-      z-index: 2;
-      position: relative;
-    }
-
-    .badges {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 20px;
-      flex-wrap: wrap;
-      z-index: 2;
-      position: relative;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    .badge {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 14px;
-    }
-
-    .badge span {
-      font-size: 22px;
-      margin-bottom: 5px;
-    }
-
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #1DA851;
-    }
-
-    @media screen and (max-width: 768px) {
-      .hero-text h1 { font-size: 22px; }
-      .hero-text h2 { font-size: 20px; }
-      .hero-text h3 { font-size: 18px; }
-      .cta-button { font-size: 16px; padding: 14px 20px; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WTF Burger</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="WTF Burger Logo">
+    <nav>
+      <a href="index.html">PAGE PRINCIPALE</a>
+      <a href="notre-histoire.html">NOTRE HISTOIRE</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
 
-  <section class="hero">
-    <!-- Texte en haut de l’image -->
-    <div class="hero-text">
+  <section class="hero" style="background-image: url('hero-header.jpg');">
+    <div class="hero-content">
       <h1>COMMANDEZ MAINTENANT</h1>
       <h2>LIVRAISON GRATUITE</h2>
       <h3>7J/7 DE 11H À 4H</h3>
-      <p>−10 % EN LIGNE + 1 CHEESEBURGER OFFERT<br>Livraison sur Bruxelles & alentours</p>
-    </div>
+      <p>−10 % EN RETRAIT SUR BRUXELLES & ALENTOURS</p>
+      <a class="cta-button"
+         href="#"
+         data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02"
+         data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
+         VOIR LE MENU – COMMANDER EN LIGNE
+      </a>
 
-    <!-- Bouton en bas de l’image -->
-    <a class="cta-button"
-       href="#"
-       data-glf-cuid="1b838432-e5e3-445b-b
+      <div class="badges">
+        <div class="badge"><img src="halal.png" alt="Halal" width="30"></div>
+        <div class="badge">⭐️⭐️⭐️⭐️⭐️<br>+ 500 avis 5 étoiles</div>
+        <div class="badge"><img src="scooter.png" alt="Livraison" width="30"><br>Livré en 25 minutes en moyenne</div>
+      </div>
+    </div>
+  </section>
+
+  <a class="whatsapp-button" href="https://wa.me/32487221122" target="_blank">
+    Commander via WhatsApp
+  </a>
+
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+</body>
+</html>
