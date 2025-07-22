@@ -1,252 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WTF BURGER</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WTF Burger</title>
+  <link rel="stylesheet" href="style.css"/>
   <style>
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #000;
-      color: white;
-      text-align: center;
+      font-family: Arial, sans-serif;
     }
+
     header {
+      background-color: black;
+      color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
-      background-color: #000;
-      flex-wrap: wrap;
+      padding: 10px 20px;
     }
-    header img {
+
+    .logo {
       height: 60px;
-      background: none;
     }
-    nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
       font-weight: bold;
-      display: inline-block;
-      padding: 10px 0;
     }
+
     .hero {
-      background: url('hero-header.jpg') no-repeat center/cover;
-      padding: 120px 20px 60px;
+      position: relative;
+      text-align: center;
+      color: white;
     }
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      line-height: 1.3;
+
+    .hero img {
+      width: 100%;
+      height: auto;
     }
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
+
+    .hero .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    .hero .cta {
+
+    .hero .text h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .hero .text p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    .glf-button {
+      display: inline-block;
       background-color: red;
       color: white;
       padding: 15px 25px;
-      font-size: 18px;
       border-radius: 30px;
-      text-decoration: none;
-      display: inline-block;
       font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
     }
-    .section {
-      padding: 60px 20px;
-    }
-    .section h2 {
-      font-size: 32px;
-      margin-bottom: 40px;
-      color: red;
-    }
-    .burgers {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    .burger {
-      background-color: #111;
-      padding: 20px;
-      border-radius: 15px;
-      width: 280px;
-      flex: 0 0 auto;
-    }
-    .burger img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .burger h3 {
-      margin-top: 10px;
-    }
-    .btn-order {
-      background-color: red;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin-top: 10px;
-      font-weight: bold;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-    .reviews {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    .review {
-      background-color: #111;
-      padding: 20px;
-      border-radius: 15px;
-      width: 280px;
-    }
-    .footer {
-      padding: 40px 20px;
-      background-color: #111;
-    }
-    .whatsapp-button {
+
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       left: 20px;
-      background-color: #25D366;
+      z-index: 100;
+    }
+
+    .whatsapp-float a {
+      background-color: #25d366;
       color: white;
       padding: 12px 20px;
-      border-radius: 50px;
-      font-weight: bold;
+      border-radius: 30px;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
+      font-weight: bold;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     }
-    .whatsapp-button:hover {
-      background-color: #1DA851;
-    }
+
     @media screen and (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
+      .hero .text h1 {
+        font-size: 1.8em;
       }
-      .hero p {
-        font-size: 16px;
-      }
-      nav a {
-        margin: 5px;
-        display: block;
-      }
-      .burgers {
-        flex-wrap: nowrap;
-        overflow-x: auto;
+
+      .glf-button {
+        font-size: 14px;
+        padding: 12px 20px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="WTF BURGER">
-    <nav>
-      <a href="#notre-histoire">NOTRE HISTOIRE</a>
-      <a href="#contact">CONTACT</a>
+    <img src="logo.png" alt="Logo WTF Burger" class="logo"/>
+    <nav class="nav-links">
+      <a href="notre-histoire.html" style="color: white; text-decoration: none;">NOTRE HISTOIRE</a>
+      <a href="contact.html" style="color: white; text-decoration: none;">CONTACT</a>
     </nav>
   </header>
 
-<header class="hero-header" style="background-image: url('hero-header.jpg'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: white;">
-  <div class="container">
-    <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 20px; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">
-      COMMANDEZ<br>MAINTENANT<br>WTF BURGER
-    </h1>
-    <p style="font-size: 18px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
-      LIVRAISON GRATUITE - 7/7 DE 11H À 4H
-    </p>
-
- 
-  <!-- Bouton GloriaFood -->
-  <section class="section">
-    <span class="glf-button" data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02" data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
-      Voir Menu & Commander
-    </span>
-    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
-  </section>
-
-  <section class="section" id="menu">
-    <h2>TOP 3 BEST-SELLERS</h2>
-    <div class="burgers">
-      <div class="burger">
-        <img src="spicy-jalapenos.jpg" alt="Spicy Jalapeños">
-        <h3>Spicy Jalapeños</h3>
-        <button class="btn-order">COMMANDER CELUI-CI</button>
-      </div>
-      <div class="burger">
-        <img src="double-cheesy-onion.jpg" alt="Double Cheesy Onion">
-        <h3>Double Cheesy Onion</h3>
-        <button class="btn-order">COMMANDER CELUI-CI</button>
-      </div>
-      <div class="burger">
-        <img src="truffle-burger.jpg" alt="Truffle Burger">
-        <h3>Truffle Burger</h3>
-        <button class="btn-order">COMMANDER CELUI-CI</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="notre-histoire">
-    <h2>NOTRE HISTOIRE</h2>
-    <p>
-      WTF Burger est né d’une idée simple mais audacieuse : pourquoi réserver le goût et la qualité aux professionnels ?
-      Avant d’ouvrir au grand public, nous étions un service traiteur discret, réservé aux événements privés, aux plateaux de tournage, aux afterworks et aux professionnels nocturnes de Bruxelles.
-    </p>
-    <p>
-      Pendant des années, notre cuisine a vécu dans l’ombre : des burgers montés avec rigueur, une équipe exigeante et passionnée, une sauce maison que seuls quelques initiés connaissaient. Nos clients réguliers ? Des chefs d’entreprise, des artistes, des livreurs de nuit, des équipes de prod... Tous nous disaient la même chose : "Vous devriez ouvrir ça au monde."
-    </p>
-    <p>
-      Alors on l’a fait.
-      En 2025, on a décidé de sortir de l’ombre. Mais pas comme les autres. Pas avec une grande enseigne ou des promesses creuses. On a gardé notre ADN : une dark kitchen, sans salle, mais avec une passion à fond. On livre, on emballe, on soigne chaque commande comme si c’était la première. Parce que pour vous, c’est peut-être la première.
-    </p>
-    <p>
-      WTF Burger aujourd’hui, c’est une cuisine cachée qui fait du bruit. Des burgers montés minute, des ingrédients choisis, et surtout une mission : servir la qualité des pros… à tout le monde. Que tu sois en pyjama devant Netflix, au bureau à minuit ou entre potes à Ixelles, tu peux commander un burger digne d’un chef.
-    </p>
-    <p>
-      Bienvenue dans notre cuisine. Bienvenue chez WTF Burger.
-    </p>
-    <p>Depuis notre création, WTF Burger s'efforce de servir des burgers originaux, halal et explosifs de saveurs. Une passion née dans les rues de Bruxelles et qui ne cesse de grandir !</p>
-  </section>
-
-  <section class="section" id="contact">
-    <h2>CONTACT</h2>
-    <p>📍 Rue Malibran, 113 1050 Ixelles<br>
-       📞 +32 487 22 11 22<br>
-       📧 kitchenoty@gmail.com</p>
-  </section>
-
-  <section class="section">
-    <h2>AVIS CLIENTS</h2>
-    <div class="reviews">
-      <div class="review">
-        <p>⭐⭐⭐⭐⭐<br>Livraison rapide, burger bien chaud et trop bon ! Je recommande</p>
-        <small>Samira B. (Ixelles)</small>
-      </div>
-      <div class="review">
-        <p>⭐⭐⭐⭐⭐<br>Agréablement surpris, Le classique est savoureux, les portions sont généreuses !</p>
-        <small>Adrian L. (Saint-Josse)</small>
-      </div>
-      <div class="review">
-        <p>⭐⭐⭐⭐⭐<br> C'est devenu notre nouveau burger du samedi soir !</p>
-        <small>Nadia T. (Usclo)</small>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <h2>NOS PROMOTIONS</h2>
-    <p>Bientôt en ligne...</p>
-  </footer>
-
-  <!-- Bouton WhatsApp flottant -->
-  <a class="whatsapp-button" href="https://wa.me/32487221122" target="_blank">
-    Commander via WhatsApp
-  </a>
-</body>
-</html>
+  <section class="hero">
+    <img src="hero-header.jpg" alt="Burger neon"/>
+    <div class="text">
+      <h1>COMMANDEZ MAINTENANT<br>WTF BURGER</h1
