@@ -13,6 +13,7 @@
       color: white;
       text-align: center;
     }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -21,55 +22,79 @@
       background-color: #000;
       flex-wrap: wrap;
     }
+
     header img {
       height: 60px;
-      background: none;
     }
+
     nav a {
-      color: #fff;
-      margin: 0 10px;
+      display: inline-block;
+      margin: 0 15px;
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      display: inline-block;
-      padding: 10px 0;
     }
+
     .hero {
+      position: relative;
       background: url('hero-header.jpg') no-repeat center/cover;
-      padding: 120px 20px 60px;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      padding: 20px;
+    }
+
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      line-height: 1.3;
-    }
-    .hero p {
-      font-size: 20px;
+      font-size: 42px;
+      line-height: 1.4;
       margin-bottom: 30px;
     }
-    .hero .cta {
-      background-color: red;
+
+    .glf-button {
+      background-color: orange;
       color: white;
+      font-weight: bold;
       padding: 15px 25px;
-      font-size: 18px;
       border-radius: 30px;
       text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
       display: inline-block;
-      font-weight: bold;
     }
+
     .section {
       padding: 60px 20px;
     }
+
     .section h2 {
       font-size: 32px;
       margin-bottom: 40px;
       color: red;
     }
+
     .burgers {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
     }
+
     .burger {
       background-color: #111;
       padding: 20px;
@@ -77,13 +102,16 @@
       width: 280px;
       flex: 0 0 auto;
     }
+
     .burger img {
       width: 100%;
       border-radius: 10px;
     }
+
     .burger h3 {
       margin-top: 10px;
     }
+
     .btn-order {
       background-color: red;
       color: white;
@@ -94,22 +122,26 @@
       border-radius: 20px;
       cursor: pointer;
     }
+
     .reviews {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
     }
+
     .review {
       background-color: #111;
       padding: 20px;
       border-radius: 15px;
       width: 280px;
     }
+
     .footer {
       padding: 40px 20px;
       background-color: #111;
     }
+
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -123,20 +155,21 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       z-index: 1000;
     }
+
     .whatsapp-button:hover {
       background-color: #1DA851;
     }
+
     @media screen and (max-width: 768px) {
       .hero h1 {
         font-size: 36px;
       }
-      .hero p {
-        font-size: 16px;
-      }
+
       nav a {
-        margin: 5px;
         display: block;
+        margin: 5px;
       }
+
       .burgers {
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -145,27 +178,29 @@
   </style>
 </head>
 <body>
+
   <header>
     <img src="logo.png" alt="WTF BURGER">
     <nav>
       <a href="#notre-histoire">NOTRE HISTOIRE</a>
+      <a href="#menu">MENU</a>
       <a href="#contact">CONTACT</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>COMMANDEZ MAINTENANT<br>WTF BURGER</h1>
-    <p>LIVRAISON GRATUITE - 7/7 DE 11H À 4H</p>
-    <a href="#menu" class="cta">DÉCOUVREZ NOTRE MENU<br><small>LIVRAISON GRATUITE - 10% EN LIGNE</small></a>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Commander maintenant<br>et bénéficier de 10 % de réduction</h1>
+      <span class="glf-button"
+        data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02"
+        data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
+        Voir Menu & Commander
+      </span>
+    </div>
   </section>
 
-  <!-- Bouton GloriaFood -->
-  <section class="section">
-    <span class="glf-button" data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02" data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
-      Voir Menu & Commander
-    </span>
-    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
-  </section>
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
   <section class="section" id="menu">
     <h2>TOP 3 BEST-SELLERS</h2>
@@ -207,7 +242,9 @@
     <p>
       Bienvenue dans notre cuisine. Bienvenue chez WTF Burger.
     </p>
-    <p>Depuis notre création, WTF Burger s'efforce de servir des burgers originaux, halal et explosifs de saveurs. Une passion née dans les rues de Bruxelles et qui ne cesse de grandir !</p>
+    <p>
+      Depuis notre création, WTF Burger s'efforce de servir des burgers originaux, halal et explosifs de saveurs. Une passion née dans les rues de Bruxelles et qui ne cesse de grandir !
+    </p>
   </section>
 
   <section class="section" id="contact">
@@ -244,5 +281,6 @@
   <a class="whatsapp-button" href="https://wa.me/32487221122" target="_blank">
     Commander via WhatsApp
   </a>
+
 </body>
 </html>
