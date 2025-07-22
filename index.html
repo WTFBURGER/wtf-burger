@@ -19,15 +19,19 @@
       align-items: center;
       padding: 20px;
       background-color: #000;
+      flex-wrap: wrap;
     }
     header img {
       height: 60px;
+      background: none;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
+      padding: 10px 0;
     }
     .hero {
       background: url('hero-header.jpg') no-repeat center/cover;
@@ -35,7 +39,8 @@
     }
     .hero h1 {
       font-size: 48px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      line-height: 1.3;
     }
     .hero p {
       font-size: 20px;
@@ -70,6 +75,7 @@
       padding: 20px;
       border-radius: 15px;
       width: 280px;
+      flex: 0 0 auto;
     }
     .burger img {
       width: 100%;
@@ -120,21 +126,45 @@
     .whatsapp-button:hover {
       background-color: #1DA851;
     }
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      nav a {
+        margin: 5px;
+        display: block;
+      }
+      .burgers {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="WTF BURGER">
     <nav>
-      <a href="#">NOTRE HISTOIRE</a>
-      <a href="#">CONTACT</a>
+      <a href="#notre-histoire">NOTRE HISTOIRE</a>
+      <a href="#contact">CONTACT</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>COMMANDEZ MAINTENANT</h1>
+    <h1>COMMANDEZ MAINTENANT<br>WTF BURGER</h1>
     <p>LIVRAISON GRATUITE - 7/7 DE 11H À 4H</p>
     <a href="#menu" class="cta">DÉCOUVREZ NOTRE MENU<br><small>LIVRAISON GRATUITE - 10% EN LIGNE</small></a>
+  </section>
+
+  <!-- Bouton GloriaFood -->
+  <section class="section">
+    <span class="glf-button" data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02" data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
+      Voir Menu & Commander
+    </span>
+    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
   </section>
 
   <section class="section" id="menu">
@@ -158,6 +188,35 @@
     </div>
   </section>
 
+  <section class="section" id="notre-histoire">
+    <h2>NOTRE HISTOIRE</h2>
+    <p>
+      WTF Burger est né d’une idée simple mais audacieuse : pourquoi réserver le goût et la qualité aux professionnels ?
+      Avant d’ouvrir au grand public, nous étions un service traiteur discret, réservé aux événements privés, aux plateaux de tournage, aux afterworks et aux professionnels nocturnes de Bruxelles.
+    </p>
+    <p>
+      Pendant des années, notre cuisine a vécu dans l’ombre : des burgers montés avec rigueur, une équipe exigeante et passionnée, une sauce maison que seuls quelques initiés connaissaient. Nos clients réguliers ? Des chefs d’entreprise, des artistes, des livreurs de nuit, des équipes de prod... Tous nous disaient la même chose : "Vous devriez ouvrir ça au monde."
+    </p>
+    <p>
+      Alors on l’a fait.
+      En 2025, on a décidé de sortir de l’ombre. Mais pas comme les autres. Pas avec une grande enseigne ou des promesses creuses. On a gardé notre ADN : une dark kitchen, sans salle, mais avec une passion à fond. On livre, on emballe, on soigne chaque commande comme si c’était la première. Parce que pour vous, c’est peut-être la première.
+    </p>
+    <p>
+      WTF Burger aujourd’hui, c’est une cuisine cachée qui fait du bruit. Des burgers montés minute, des ingrédients choisis, et surtout une mission : servir la qualité des pros… à tout le monde. Que tu sois en pyjama devant Netflix, au bureau à minuit ou entre potes à Ixelles, tu peux commander un burger digne d’un chef.
+    </p>
+    <p>
+      Bienvenue dans notre cuisine. Bienvenue chez WTF Burger.
+    </p>
+    <p>Depuis notre création, WTF Burger s'efforce de servir des burgers originaux, halal et explosifs de saveurs. Une passion née dans les rues de Bruxelles et qui ne cesse de grandir !</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>CONTACT</h2>
+    <p>📍 Rue Malibran, 113 1050 Ixelles<br>
+       📞 +32 487 22 11 22<br>
+       📧 kitchenoty@gmail.com</p>
+  </section>
+
   <section class="section">
     <h2>AVIS CLIENTS</h2>
     <div class="reviews">
@@ -166,11 +225,11 @@
         <small>Samira B. (Ixelles)</small>
       </div>
       <div class="review">
-        <p>⭐⭐⭐⭐⭐<br>Livraison rapide, ranis bien chaud et trop bon ! Je recome !</p>
+        <p>⭐⭐⭐⭐⭐<br>Agréablement surpris, Le classique est savoureux, les portions sont généreuses !</p>
         <small>Adrian L. (Saint-Josse)</small>
       </div>
       <div class="review">
-        <p>⭐⭐⭐⭐⭐<br>Livraison rapide. brave bunbien chaud, un seveur oie !</p>
+        <p>⭐⭐⭐⭐⭐<br> C'est devenu notre nouveau burger du samedi soir !</p>
         <small>Nadia T. (Usclo)</small>
       </div>
     </div>
@@ -182,7 +241,7 @@
   </footer>
 
   <!-- Bouton WhatsApp flottant -->
-  <a class="whatsapp-button" href="https://wtfburger.gloriafood.com" target="_blank">
+  <a class="whatsapp-button" href="https://wa.me/32487221122" target="_blank">
     Commander via WhatsApp
   </a>
 </body>
