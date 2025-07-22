@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WTF BURGER</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -15,97 +15,149 @@
     }
 
     .hero {
-      background: url('hero-header.jpg') center/cover no-repeat;
+      position: relative;
+      background: url('hero-header.jpg') no-repeat center/cover;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      padding: 20px;
+      padding: 30px 20px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     .hero h1 {
-      font-size: 2.5em;
-      color: #FFD700;
+      font-size: 30px;
+      font-weight: 700;
       margin-bottom: 10px;
     }
 
     .hero h2 {
-      font-size: 1.5em;
-      color: #fff;
-      margin-bottom: 10px;
+      color: #FFD700;
+      font-size: 26px;
+      margin: 0;
+    }
+
+    .hero h3 {
+      color: #FFD700;
+      font-size: 22px;
+      margin: 5px 0 20px;
     }
 
     .hero p {
-      font-size: 1.2em;
-      margin: 5px 0;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 30px;
     }
 
     .cta-button {
-      margin-top: 20px;
       background-color: red;
       color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      border-radius: 5px;
-      cursor: pointer;
+      font-weight: bold;
+      padding: 16px 28px;
+      border-radius: 30px;
+      font-size: 18px;
       text-decoration: none;
       display: inline-block;
+      margin-bottom: 30px;
     }
 
-    .info-bar {
+    .badges {
       display: flex;
-      justify-content: space-around;
-      background-color: #111;
-      padding: 15px;
-      font-size: 0.9em;
+      justify-content: center;
+      gap: 30px;
       flex-wrap: wrap;
+      font-size: 14px;
     }
 
-    .info-bar div {
-      margin: 10px;
+    .badge {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
+    }
+
+    .badge span {
+      font-size: 22px;
+      margin-bottom: 5px;
     }
 
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
-      right: 20px;
-      z-index: 999;
+      left: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
     }
 
-    .whatsapp-button img {
-      width: 60px;
-      height: 60px;
+    .whatsapp-button:hover {
+      background-color: #1DA851;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero h1 { font-size: 24px; }
+      .hero h2 { font-size: 20px; }
+      .hero h3 { font-size: 18px; }
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>COMMANDEZ MAINTENANT</h1>
-    <h2>LIVRAISON GRATUITE – 7J/7 DE 11H À 4H</h2>
-    <p>-10% EN LIGNE + 1 CHEESEBURGER OFFERT</p>
-    <p>LIVRAISON SUR BRUXELLES & ALENTOURS</p>
-    <a class="cta-button" href="https://www.wtfburger.be/menu" target="_blank">VOIR LE MENU – COMMANDER EN LIGNE</a>
-  </div>
 
-  <div class="info-bar">
-    <div>⭐ +500 avis 5 étoiles</div>
-    <div>✅ Halal certifié</div>
-    <div>⏱ Livré en 25 minutes en moyenne</div>
-  </div>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>COMMANDEZ MAINTENANT</h1>
+      <h2>LIVRAISON GRATUITE</h2>
+      <h3>7J/7 DE 11H À 4H</h3>
+      <p>−10 % EN LIGNE + 1 CHEESEBURGER OFFERT<br>LIVRAISON SUR BRUXELLES & ALENTOURS</p>
 
-  <div class="whatsapp-button">
-    <a href="https://wa.me/32412345678" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-  </div>
+      <a class="cta-button"
+         href="#"
+         data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02"
+         data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
+         VOIR LE MENU – COMMANDER EN LIGNE
+      </a>
 
-  <script>
-    // Si besoin de script ultérieur
-  </script>
+      <div class="badges">
+        <div class="badge">
+          <span>⭐️⭐️⭐️⭐️⭐️</span>
+          <div>+500 avis 5 étoiles</div>
+        </div>
+        <div class="badge">
+          <span>✔️</span>
+          <div>Halal certifié</div>
+        </div>
+        <div class="badge">
+          <span>⏱️</span>
+          <div>Livré en 25 minutes<br>en moyenne</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+
+  <a class="whatsapp-button" href="https://wa.me/32487221122" target="_blank">
+    Commander via WhatsApp
+  </a>
+
 </body>
 </html>
