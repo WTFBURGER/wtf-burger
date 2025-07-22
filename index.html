@@ -153,29 +153,54 @@
     </nav>
   </header>
 
-<section class="hero" style="position: relative;">
-  <img src="hero-burger-neon.jpg" alt="Burger néon" style="width: 100%; height: auto; display: block;">
+<!-- HERO HEADER -->
+<section class="hero" style="position: relative; width: 100%;">
+  <!-- Image de fond -->
+  <img src="hero-burger-neon.jpg" alt="Burger WTF" style="width: 100%; height: auto; display: block; object-fit: cover;">
 
+  <!-- Overlay texte -->
   <div style="
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5); /* semi-transparent */
+    background: rgba(0,0,0,0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
-    padding: 20px;
+    color: white;
+    padding: 30px;
   ">
-    <h1 style="font-size: 36px; margin-bottom: 10px;">COMMANDEZ MAINTENANT<br>WTF BURGER</h1>
-    <p style="font-size: 18px; margin-bottom: 20px;">LIVRAISON GRATUITE - 7/7 DE 11H À 4H</p>
-    <a href="#menu" class="cta" style="text-decoration: none;">DÉCOUVREZ NOTRE MENU<br><small>LIVRAISON GRATUITE - 10% EN LIGNE</small></a>
+    <h1 style="font-size: 32px; margin: 0 0 10px;">COMMANDEZ MAINTENANT<br>WTF BURGER</h1>
+    <p style="font-size: 16px; margin-bottom: 20px;">LIVRAISON GRATUITE - 7/7 DE 11H À 4H</p>
+    
+    <!-- Bouton principal rouge -->
+    <a href="#menu" style="
+      background-color: #e60000;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 15px;
+    ">
+      DÉCOUVREZ NOTRE MENU<br><small style="font-size: 12px;">LIVRAISON GRATUITE - 10% EN LIGNE</small>
+    </a>
+
+    <!-- Bouton GloriaFood -->
+    <span class="glf-button" 
+      data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02" 
+      data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561" 
+      style="margin-top: 10px;">
+      Voir Menu & Commander
+    </span>
+    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
   </div>
 </section>
+
 
 
 
