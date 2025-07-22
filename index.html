@@ -16,51 +16,40 @@
 
     .hero {
       position: relative;
-      background: url('hero-header.jpg') no-repeat center/cover;
+      width: 100%;
       height: 100vh;
+      background: url('hero-header.jpg') no-repeat center/cover;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 30px 20px;
+      justify-content: space-between;
     }
 
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
+    .hero-text {
+      padding: 40px 20px 0;
       z-index: 2;
-      max-width: 700px;
-      margin: 0 auto;
+      position: relative;
     }
 
-    .hero h1 {
-      font-size: 30px;
-      font-weight: 700;
+    .hero-text h1 {
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
-    .hero h2 {
-      color: #FFD700;
+    .hero-text h2 {
       font-size: 26px;
+      color: #FFD700;
       margin: 0;
     }
 
-    .hero h3 {
+    .hero-text h3 {
+      font-size: 24px;
       color: #FFD700;
-      font-size: 22px;
-      margin: 5px 0 20px;
+      margin: 10px 0 20px;
     }
 
-    .hero p {
+    .hero-text p {
       font-size: 16px;
-      line-height: 1.4;
-      margin-bottom: 30px;
+      margin: 0;
     }
 
     .cta-button {
@@ -72,21 +61,27 @@
       font-size: 18px;
       text-decoration: none;
       display: inline-block;
-      margin-bottom: 30px;
+      margin: 0 auto;
+      z-index: 2;
+      position: relative;
     }
 
     .badges {
       display: flex;
       justify-content: center;
       gap: 30px;
+      padding: 20px;
       flex-wrap: wrap;
-      font-size: 14px;
+      z-index: 2;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     .badge {
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-size: 14px;
     }
 
     .badge span {
@@ -113,51 +108,25 @@
     }
 
     @media screen and (max-width: 768px) {
-      .hero h1 { font-size: 24px; }
-      .hero h2 { font-size: 20px; }
-      .hero h3 { font-size: 18px; }
+      .hero-text h1 { font-size: 22px; }
+      .hero-text h2 { font-size: 20px; }
+      .hero-text h3 { font-size: 18px; }
+      .cta-button { font-size: 16px; padding: 14px 20px; }
     }
   </style>
 </head>
 <body>
 
   <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
+    <!-- Texte en haut de l’image -->
+    <div class="hero-text">
       <h1>COMMANDEZ MAINTENANT</h1>
       <h2>LIVRAISON GRATUITE</h2>
       <h3>7J/7 DE 11H À 4H</h3>
-      <p>−10 % EN LIGNE + 1 CHEESEBURGER OFFERT<br>LIVRAISON SUR BRUXELLES & ALENTOURS</p>
-
-      <a class="cta-button"
-         href="#"
-         data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02"
-         data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
-         VOIR LE MENU – COMMANDER EN LIGNE
-      </a>
-
-      <div class="badges">
-        <div class="badge">
-          <span>⭐️⭐️⭐️⭐️⭐️</span>
-          <div>+500 avis 5 étoiles</div>
-        </div>
-        <div class="badge">
-          <span>✔️</span>
-          <div>Halal certifié</div>
-        </div>
-        <div class="badge">
-          <span>⏱️</span>
-          <div>Livré en 25 minutes<br>en moyenne</div>
-        </div>
-      </div>
+      <p>−10 % EN LIGNE + 1 CHEESEBURGER OFFERT<br>Livraison sur Bruxelles & alentours</p>
     </div>
-  </section>
 
-  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
-
-  <a class="whatsapp-button" href="https://wa.me/32487221122" target="_blank">
-    Commander via WhatsApp
-  </a>
-
-</body>
-</html>
+    <!-- Bouton en bas de l’image -->
+    <a class="cta-button"
+       href="#"
+       data-glf-cuid="1b838432-e5e3-445b-b
