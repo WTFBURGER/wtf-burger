@@ -153,53 +153,40 @@
     </nav>
   </header>
 
-<!-- HERO HEADER -->
-<section class="hero" style="position: relative; width: 100%;">
-  <!-- Image de fond -->
-  <img src="hero-burger-neon.jpg" alt="Burger WTF" style="width: 100%; height: auto; display: block; object-fit: cover;">
+<header class="hero-header" style="background-image: url('hero-header.jpg'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: white;">
+  <div class="container">
+    <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 20px; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">
+      COMMANDEZ<br>MAINTENANT<br>WTF BURGER
+    </h1>
+    <p style="font-size: 18px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+      LIVRAISON GRATUITE - 7/7 DE 11H À 4H
+    </p>
 
-  <!-- Overlay texte -->
-  <div style="
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 30px;
-  ">
-    <h1 style="font-size: 32px; margin: 0 0 10px;">COMMANDEZ MAINTENANT<br>WTF BURGER</h1>
-    <p style="font-size: 16px; margin-bottom: 20px;">LIVRAISON GRATUITE - 7/7 DE 11H À 4H</p>
-    
-    <!-- Bouton principal rouge -->
-    <a href="#menu" style="
-      background-color: #e60000;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-bottom: 15px;
-    ">
-      DÉCOUVREZ NOTRE MENU<br><small style="font-size: 12px;">LIVRAISON GRATUITE - 10% EN LIGNE</small>
-    </a>
-
-    <!-- Bouton GloriaFood -->
+    <!-- Bouton GloriaFood personnalisé -->
     <span class="glf-button" 
-      data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02" 
-      data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561" 
-      style="margin-top: 10px;">
-      Voir Menu & Commander
+          data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02" 
+          data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561"
+          style="
+            background-color: #e60000;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-block;
+            text-align: center;
+            margin-top: 25px;
+            line-height: 1.4;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+          ">
+      DÉCOUVREZ NOTRE MENU<br>
+      <small style="font-size: 12px;">LIVRAISON GRATUITE - 10% EN LIGNE</small>
     </span>
-    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
   </div>
-</section>
+</header>
+
+<!-- Script GloriaFood -->
+<script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
 
 
