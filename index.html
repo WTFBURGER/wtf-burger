@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WTF BURGER</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Montserrat', sans-serif;
-      background: url('burger_background.jpg') center/cover no-repeat fixed;
-      color: white;
     }
 
-    header {
-      background-color: rgba(0, 0, 0, 0.8);
+    .hero {
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px;
-      flex-wrap: wrap;
-    }
-
-    header a {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      background: url('burger_background.jpg') center/cover no-repeat;
       color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
+      position: relative;
     }
 
-    .content {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      max-width: 600px;
+      margin-left: 5%;
+      border-radius: 10px;
     }
 
-    h1 {
-      font-size: 1.8rem;
+    .overlay h1 {
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
-    h2 {
-      font-size: 2.2rem;
-      margin: 0.5rem 0;
+    .overlay h2 {
+      font-size: 2.5rem;
       color: #FFD700;
+      margin-bottom: 1rem;
     }
 
-    p {
+    .overlay p {
       font-size: 1rem;
       margin-bottom: 2rem;
     }
@@ -69,10 +62,30 @@
 
     .features {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: 1rem;
       font-size: 0.9rem;
+    }
+
+    header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
     }
 
     .whatsapp-float {
@@ -91,12 +104,32 @@
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 1.4rem; }
-      h2 { font-size: 1.6rem; }
+      .hero {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 2rem 1rem;
+      }
+
+      .overlay {
+        margin: 0 auto;
+        padding: 1.5rem;
+        max-width: 100%;
+      }
+
+      .overlay h2 {
+        font-size: 1.8rem;
+      }
+
+      header {
+        position: static;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
       .features {
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        align-items: flex-start;
       }
     }
   </style>
@@ -109,21 +142,23 @@
     <a href="#">CONTACT</a>
   </header>
 
-  <div class="content">
-    <h1>COMMANDEZ MAINTENANT</h1>
-    <h2>LIVRAISON GRATUITE<br>7J/7 DE 11H À 4H</h2>
-    <p>- 10 % EN RETRAIT SUR BRUXELLES & ALENTOUR</p>
+  <section class="hero">
+    <div class="overlay">
+      <h1>COMMANDEZ MAINTENANT</h1>
+      <h2>LIVRAISON GRATUITE<br>7J/7 DE 11H À 4H</h2>
+      <p>- 10 % EN RETRAIT SUR BRUXELLES & ALENTOUR</p>
 
-    <a class="btn" href="https://www.fbgcdn.com/embedder/js/ewm2.js" target="_blank">
-      VOIR LE MENU – COMMANDER EN LIGNE
-    </a>
+      <a class="btn" href="https://www.fbgcdn.com/embedder/js/ewm2.js" target="_blank">
+        VOIR LE MENU – COMMANDER EN LIGNE
+      </a>
 
-    <div class="features">
-      <div>⭐ +500 avis 5 étoiles</div>
-      <div>✅ Halal certifié</div>
-      <div>⏱️ Livré en 25 min en moyenne</div>
+      <div class="features">
+        <div>⭐ +500 avis 5 étoiles</div>
+        <div>✅ Halal certifié</div>
+        <div>⏱️ Livré en 25 min en moyenne</div>
+      </div>
     </div>
-  </div>
+  </section>
 
   <a href="https://wa.me/32487221122" class="whatsapp-float" target="_blank">
     WhatsApp
