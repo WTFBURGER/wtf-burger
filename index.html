@@ -68,8 +68,8 @@
 
     .glf-button {
       display: inline-block;
-      background-color: red;
-      color: white;
+      background-color: red !important;
+      color: white !important;
       font-size: 16px;
       padding: 15px 30px;
       border-radius: 10px;
@@ -95,6 +95,11 @@
     .badges img {
       height: 40px;
       margin-bottom: 5px;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 20px;
     }
 
     .whatsapp-float {
@@ -152,7 +157,7 @@
     <h3>7J/7 DE 11H À 4H</h3>
     <p>- 10 % EN RETRAIT SUR BRUXELLES & ALENTOUR</p>
 
-    <!-- Bouton GloriaFood intégré -->
+    <!-- Bouton GloriaFood -->
     <span class="glf-button"
       data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02"
       data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
@@ -161,16 +166,21 @@
 
     <!-- Badges qualité -->
     <div class="badges">
+      <!-- Halal -->
       <div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Halal_logo.svg/2048px-Halal_logo.svg.png" alt="Halal" />
+        <img src="halal.png" alt="Halal" />
         <div>HALAL</div>
       </div>
+
+      <!-- Étoiles -->
       <div>
-        <div>★★★★★</div>
+        <div class="stars">★★★★★</div>
         <div>+ 500 avis 5 étoiles</div>
       </div>
+
+      <!-- Livraison rapide -->
       <div>
-        <img src="https://cdn-icons-png.flaticon.com/512/1048/1048319.png" alt="Livraison rapide" />
+        <img src="scooter.png" alt="Livraison rapide" />
         <div>Livré en 25 minutes<br>en moyenne</div>
       </div>
     </div>
