@@ -2,134 +2,132 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WTF BURGER</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WTF Burger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   <style>
-    body, html {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      height: 100%;
+    }
+
+    body {
       font-family: 'Montserrat', sans-serif;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      height: 100vh;
-      background: url('burger_background.jpg') center/cover no-repeat;
+      background: url('burger_background.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
-      position: relative;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
-      max-width: 600px;
-      margin-left: 5%;
-      border-radius: 10px;
-    }
-
-    .overlay h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .overlay h2 {
-      font-size: 2.5rem;
-      color: #FFD700;
-      margin-bottom: 1rem;
-    }
-
-    .overlay p {
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .btn {
-      background-color: #E63946;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 2rem;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.9rem;
+      text-align: center;
     }
 
     header {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      right: 20px;
+      background-color: black;
+      padding: 15px 20px;
       display: flex;
-      justify-content: center;
-      gap: 30px;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
-      border-radius: 8px;
     }
 
-    header a {
+    header img {
+      height: 50px;
+    }
+
+    nav a {
       color: white;
       text-decoration: none;
+      margin: 10px;
+      font-size: 14px;
       font-weight: bold;
-      font-size: 1rem;
+    }
+
+    .main {
+      padding: 40px 20px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .main h1 {
+      font-size: 24px;
+    }
+
+    .main h2 {
+      font-size: 28px;
+      color: #FFC400;
+      margin: 10px 0;
+    }
+
+    .main h3 {
+      font-size: 24px;
+      color: #FFC400;
+    }
+
+    .main p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: red;
+      color: white;
+      font-size: 16px;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 30px auto 20px;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .badges div {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .badges img {
+      height: 40px;
+      margin-bottom: 5px;
     }
 
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50px;
-      padding: 12px 16px;
-      font-size: 18px;
-      font-weight: bold;
-      text-decoration: none;
-      z-index: 100;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 12px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 2rem 1rem;
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .main h1 {
+        font-size: 36px;
       }
 
-      .overlay {
-        margin: 0 auto;
-        padding: 1.5rem;
-        max-width: 100%;
+      .main h2 {
+        font-size: 44px;
       }
 
-      .overlay h2 {
-        font-size: 1.8rem;
+      .main h3 {
+        font-size: 32px;
       }
 
-      header {
-        position: static;
-        justify-content: center;
-        margin-bottom: 1rem;
-      }
-
-      .features {
-        flex-direction: column;
-        align-items: flex-start;
+      .cta-button {
+        font-size: 18px;
+        padding: 20px 40px;
       }
     }
   </style>
@@ -137,31 +135,40 @@
 <body>
 
   <header>
-    <a href="#">PAGE PRINCIPALE</a>
-    <a href="#">NOTRE HISTOIRE</a>
-    <a href="#">CONTACT</a>
+    <img src="logo.png" alt="Logo WTF Burger">
+    <nav>
+      <a href="#">PAGE PRINCIPALE</a>
+      <a href="#">NOTRE HISTOIRE</a>
+      <a href="#">CONTACT</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="overlay">
-      <h1>COMMANDEZ MAINTENANT</h1>
-      <h2>LIVRAISON GRATUITE<br>7J/7 DE 11H À 4H</h2>
-      <p>- 10 % EN RETRAIT SUR BRUXELLES & ALENTOUR</p>
+  <section class="main">
+    <h1>COMMANDEZ MAINTENANT</h1>
+    <h2>LIVRAISON GRATUITE</h2>
+    <h3>7J/7 DE 11H À 4H</h3>
+    <p>- 10 % EN RETRAIT SUR BRUXELLES & ALENTOUR</p>
 
-      <a class="btn" href="https://www.fbgcdn.com/embedder/js/ewm2.js" target="_blank">
-        VOIR LE MENU – COMMANDER EN LIGNE
-      </a>
+    <a href="https://www.fbgcdn.com/embedder/js/ewm2.js" class="cta-button">VOIR LE MENU – COMMANDER EN LIGNE</a>
 
-      <div class="features">
-        <div>⭐ +500 avis 5 étoiles</div>
-        <div>✅ Halal certifié</div>
-        <div>⏱️ Livré en 25 min en moyenne</div>
+    <div class="badges">
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Halal_logo.svg/2048px-Halal_logo.svg.png" alt="Halal" />
+        <div>HALAL</div>
+      </div>
+      <div>
+        <div>★★★★★</div>
+        <div>+ 500 avis 5 étoiles</div>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/1048/1048319.png" alt="Livraison rapide" />
+        <div>Livré en 25 minutes<br>en moyenne</div>
       </div>
     </div>
   </section>
 
-  <a href="https://wa.me/32487221122" class="whatsapp-float" target="_blank">
-    WhatsApp
+  <a class="whatsapp-float" href="https://wa.me/32487221122" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
   </a>
 
 </body>
