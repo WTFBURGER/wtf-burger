@@ -66,7 +66,7 @@
       font-size: 16px;
     }
 
-    .cta-button {
+    .glf-button {
       display: inline-block;
       background-color: red;
       color: white;
@@ -76,6 +76,7 @@
       text-decoration: none;
       font-weight: bold;
       margin: 30px auto 20px;
+      cursor: pointer;
     }
 
     .badges {
@@ -112,15 +113,6 @@
       height: 30px;
     }
 
-    iframe {
-      border: none;
-      width: 100%;
-      max-width: 450px;
-      height: 700px;
-      margin: 40px auto 20px;
-      display: block;
-    }
-
     @media (min-width: 768px) {
       .main h1 {
         font-size: 36px;
@@ -134,7 +126,7 @@
         font-size: 32px;
       }
 
-      .cta-button {
+      .glf-button {
         font-size: 18px;
         padding: 20px 40px;
       }
@@ -143,7 +135,7 @@
 </head>
 <body>
 
-  <!-- Header avec navigation -->
+  <!-- Navigation -->
   <header>
     <img src="logo.png" alt="Logo WTF Burger">
     <nav>
@@ -153,21 +145,19 @@
     </nav>
   </header>
 
-  <!-- Zone principale -->
+  <!-- Section principale -->
   <section class="main">
     <h1>COMMANDEZ MAINTENANT</h1>
     <h2>LIVRAISON GRATUITE</h2>
     <h3>7J/7 DE 11H À 4H</h3>
     <p>- 10 % EN RETRAIT SUR BRUXELLES & ALENTOUR</p>
 
-    <!-- Faux bouton visuel -->
-    <span class="cta-button">VOIR LE MENU – COMMANDER EN LIGNE</span>
-
-    <!-- IFRAME Menu GloriaFood -->
-    <iframe
-      src="https://www.fbgcdn.com/menu/1b838432-e5e3-445b-bc8a-24fff971cb02"
-      title="Menu WTF Burger">
-    </iframe>
+    <!-- Bouton GloriaFood intégré -->
+    <span class="glf-button"
+      data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02"
+      data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
+      VOIR LE MENU – COMMANDER EN LIGNE
+    </span>
 
     <!-- Badges qualité -->
     <div class="badges">
@@ -186,10 +176,13 @@
     </div>
   </section>
 
-  <!-- Bouton WhatsApp flottant -->
+  <!-- Bouton WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/32487221122" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
   </a>
+
+  <!-- Script GloriaFood -->
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
 </body>
 </html>
