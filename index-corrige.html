@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WTF Burger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background-color: black;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('burger_background.jpg') center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      text-align: center;
+      color: white;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .hero-content h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hero-content h2 {
+      font-size: 20px;
+      color: #FFC400;
+      margin-bottom: 5px;
+    }
+
+    .hero-content p {
+      font-size: 15px;
+      margin: 5px 0;
+    }
+
+    .hero-content .small {
+      font-size: 13px;
+    }
+
+    .glf-button {
+      background-color: #d80000 !important;
+      color: white !important;
+      padding: 14px 22px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 15px auto;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .info-ligne {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .info-item {
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .info-item img {
+      max-width: 50px !important;
+      height: auto !important;
+      display: block !important;
+      margin: 5px auto !important;
+    }
+
+    .stars {
+      color: #FFD700;
+      font-size: 18px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 12px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <img src="logo.png" alt="Logo WTF Burger">
+    <nav>
+      <a href="index.html">PAGE PRINCIPALE</a>
+      <a href="notre-histoire.html">NOTRE HISTOIRE</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>COMMANDEZ MAINTENANT</h1>
+        <h2>LIVRAISON GRATUITE</h2>
+        <p>7J/7 DE 11H À 4H</p>
+        <p class="small">– 10 % EN RETRAIT SUR BRUXELLES & ALENTOUR</p>
+
+        <!-- Bouton GloriaFood -->
+        <span class="glf-button"
+          data-glf-cuid="1b838432-e5e3-445b-bc8a-24fff971cb02"
+          data-glf-ruid="0d842391-fa66-4109-9bb5-713cd1eb3561">
+          VOIR LE MENU – COMMANDER EN LIGNE
+        </span>
+
+        <!-- Badges qualité -->
+        <div class="info-ligne">
+          <div class="info-item">
+            <img src="halal.png" alt="Halal" />
+          </div>
+          <div class="info-item">
+            <span class="stars">★★★★★</span><br />
+            <span>+ 500 avis 5 étoiles</span>
+          </div>
+          <div class="info-item">
+            <img src="scooter.png" alt="Livraison rapide" />
+            <br /><span>Livré en 25 minutes en moyenne</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bouton WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/32487221122" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
+  <!-- Script GloriaFood -->
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+
+</body>
+</html>
