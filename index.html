@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,8 +15,7 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background: url('burger_background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #000;
       color: white;
       text-align: center;
     }
@@ -41,65 +41,91 @@
       font-weight: bold;
     }
 
-    .main {
-      padding: 40px 20px 20px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .main h1 {
-      font-size: 24px;
-    }
-
-    .main h2 {
-      font-size: 28px;
-      color: #FFC400;
-      margin: 10px 0;
-    }
-
-    .main h3 {
-      font-size: 24px;
-      color: #FFC400;
-    }
-
-    .main p {
-      margin-top: 10px;
-      font-size: 16px;
-    }
-
-    .glf-button {
-      display: inline-block;
-      background-color: red !important;
-      color: white !important;
-      font-size: 16px;
-      padding: 15px 30px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 30px auto 20px;
-      cursor: pointer;
-    }
-
-    .badges {
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('burger_background.jpg') center center / cover no-repeat;
       display: flex;
+      align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-      margin-top: 30px;
     }
 
-    .badges div {
-      font-size: 14px;
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .hero-content {
       text-align: center;
+      color: white;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .badges img {
-      height: 40px;
+    .hero-content h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hero-content h2 {
+      font-size: 20px;
+      color: #FFC400;
       margin-bottom: 5px;
     }
 
+    .hero-content p {
+      font-size: 15px;
+      margin: 5px 0;
+    }
+
+    .hero-content .small {
+      font-size: 13px;
+    }
+
+    .glf-button {
+      background-color: #d80000 !important;
+      color: white !important;
+      padding: 14px 22px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 15px auto;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .info-ligne {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .info-item {
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .info-item img {
+      max-width: 50px !important;
+      height: auto !important;
+      display: block !important;
+      margin: 5px auto !important;
+    }
+
     .stars {
-      color: gold;
-      font-size: 20px;
+      color: #FFD700;
+      font-size: 18px;
     }
 
     .whatsapp-float {
@@ -117,25 +143,6 @@
       width: 30px;
       height: 30px;
     }
-
-    @media (min-width: 768px) {
-      .main h1 {
-        font-size: 36px;
-      }
-
-      .main h2 {
-        font-size: 44px;
-      }
-
-      .main h3 {
-        font-size: 32px;
-      }
-
-      .glf-button {
-        font-size: 18px;
-        padding: 20px 40px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -150,9 +157,8 @@
     </nav>
   </header>
 
-  <!-- Section principale -->
-<section class="hero-section">
-  <div class="hero-image">
+  <!-- Section Hero -->
+  <section class="hero-section">
     <div class="hero-overlay">
       <div class="hero-content">
         <h1>COMMANDEZ MAINTENANT</h1>
@@ -183,8 +189,7 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Bouton WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/32487221122" target="_blank">
@@ -195,5 +200,4 @@
   <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
 </body>
- <img src="halal.png" alt="Halal" style="width: 50px; height: auto; display: block; margin: auto;" />
 </html>
